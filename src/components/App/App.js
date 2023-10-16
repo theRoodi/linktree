@@ -7,8 +7,8 @@ import {Signup} from '../Signup/Signup';
 export const App = () => {
     return (
         <div className={styles.main}>
-            <h1>Sign Up</h1>
             <Signup />
+            <Login />
         </div>
     );
 }

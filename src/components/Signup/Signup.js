@@ -10,18 +10,21 @@ export const Signup = () => {
     const [valid, setValid] = useState(false)
 
     useEffect(() => {
-        setValid(email && emailRegex.test(email) && password && verifyPassword && password === verifyPassword)
+        setValid(email && emailRegex.test(email) &&
+            password && verifyPassword &&
+            password === verifyPassword)
     }, [email, password, verifyPassword])
 
     const signUp = () => {
         if (valid) {
             fb.auth.createUserWithEmailAndPassword(email, password)
-                .then(() => console.log('Signup success'))
+                .then(() => console.log('Sign up success'))
         }
     }
 
     return (
         <div className={styles.main}>
+            <h1>Sign Up</h1>
             <input type="email"
                    value={email}
                    onChange={(e) => setEmail(e.currentTarget.value)}
