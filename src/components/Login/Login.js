@@ -2,6 +2,7 @@ import React, {useEffect, useState} from 'react';
 import styles from './styles.module.css'
 import {emailRegex} from '../../service/constants';
 import {fb} from '../../service';
+import {Signup} from '../Signup';
 
 export const Login = () => {
     const [email, setEmail] = useState('')
