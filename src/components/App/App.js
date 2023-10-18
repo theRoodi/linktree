@@ -9,16 +9,18 @@ import {Route, Routes} from 'react-router-dom';
 
 export const App = () => {
 
-    const {isAuth} = useAuth()
+    const {isAuth, authUser} = useAuth()
 
     return (
         <div className={styles.main}>
-            {isAuth
-                ? <Routes>
-                    <Route path="/" element={<Dashboard/>}/>
-                    <Route path="/page/:id" element={<Page/>}/>
-                </Routes>
-                : <Login/>}
+            {authUser === undefined
+                ? <></>
+                : isAuth
+                    ? <Routes>
+                        <Route path="/" element={<Dashboard/>}/>
+                        <Route path="/page/:id" element={<Page/>}/>
+                    </Routes>
+                    : <Login/>}
         </div>
     );
 }

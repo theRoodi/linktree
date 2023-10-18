@@ -1,6 +1,7 @@
 import React, {useEffect} from 'react';
 import styles from './styles.module.css'
 import {useAuth, usePages} from '../../hooks';
+import {DashboardLink} from '../DashboardLink';
 
 export const Dashboard = () => {
 
@@ -16,7 +17,7 @@ export const Dashboard = () => {
         <div className={styles.main}>
             <h1>Pages</h1>
             { pages?.map((p, index) => {
-                    return <div key={index} className={styles.page}>{p.name}</div>
+                    return <DashboardLink page={p} key={index}/>
                 }) }
         </div>
     )

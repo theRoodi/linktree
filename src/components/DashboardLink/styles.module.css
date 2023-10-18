@@ -1,0 +1,44 @@
+.main {
+}
+
+.page {
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+    justify-content: center;
+    width: 350px;
+    box-sizing: border-box;
+}
+
+.title {
+    padding: 5px;
+    flex: 3;
+    flex-basis: 245px;
+    margin-right: 10px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+
+    border-left: 1px solid rgba(128, 128, 128, 0.5);
+    border-bottom: 2px solid rgba(128, 128, 128, 0.5);
+}
+/*.title:hover {*/
+/*    transition: 0.1s;*/
+/*    box-shadow: 0px 0px 5px black;*/
+
+/*}*/
+
+.btn{
+    opacity: 30%;
+    padding: 5px;
+    height: 20px;
+    flex: 1;
+    flex-basis: 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.btn:hover {
+    opacity: 80%;
+}
