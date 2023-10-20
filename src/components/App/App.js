@@ -5,6 +5,7 @@ import {useAuth} from '../../hooks';
 import {Dashboard} from '../Dashboard/Dashboard';
 import {Page} from '../Page';
 import {Route, Routes} from 'react-router-dom';
+import {CreatePage} from '../CreatePage';
 
 
 export const App = () => {
@@ -18,6 +19,7 @@ export const App = () => {
                 : isAuth
                     ? <Routes>
                         <Route path="/" element={<Dashboard/>}/>
+                        <Route path="/createPage" element={<CreatePage/>}/>
                         <Route path="/page/:id" element={<Page/>}/>
                     </Routes>
                     : <Login/>}

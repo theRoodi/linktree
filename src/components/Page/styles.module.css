@@ -3,5 +3,15 @@
     flex-direction: column;
 }
 .link{
-
+    width: 300px;
+    padding: 5px;
+    margin: 10px;
+    box-shadow: 2px 2px 1px indigo;
+    cursor: pointer;
+    transition: 0.05s;
+    text-align: center;
+}
+.link:hover{
+    transition: 0.05s;
+    box-shadow: 3px 3px 2px indigo;
 }
