@@ -6,6 +6,7 @@
     width: 300px;
     padding: 5px;
     margin: 10px;
+    border: 1px solid;
     box-shadow: 2px 2px 1px indigo;
     cursor: pointer;
     transition: 0.05s;

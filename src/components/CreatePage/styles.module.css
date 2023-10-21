@@ -1,35 +1,95 @@
 .main {
-
+    max-width: 600px;
+    width: 95%;
 }
 
 .name {
+    margin-bottom: 25px;
+    padding: 5px;
+    width: 100%;
+    box-sizing: border-box;
 
 }
 
 .submit {
+    /*border: none;*/
+    /*background: none;*/
+    /*outline: none;*/
+    cursor: pointer;
+    padding: 5px;
 
+
+
+    margin-top: 25px;
+    width: 100%;
 }
-
 .links {
-
 }
 
 .link {
+    display: flex;
+    margin-top: 25px;
+}
 
+.linkInputs {
+    display: flex;
+    gap: 10px;
+}
+
+.linkInputs input {
+    outline: none;
+    border: none;
+    border-bottom: 1px solid gray;
+    box-sizing: border-box;
+    flex: 3;
 }
 
 .linkName {
-
+    flex: 3;
 }
 
 .linkValue {
-
+    flex: 3;
 }
 
 .deleteLink {
+    width: 30px;
+    height: 30px;
+    border: none;
+    background: none;
+    outline: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
 }
 
-.add {
+.deleteLink:hover {
+    color: red;
+}
 
+.add {
+    border: none;
+    background: none;
+    outline: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    opacity: 30%;
+}
+
+.add:hover {
+    opacity: 100%;
+    color: green;
+}
+
+.submit:disabled,
+.add:disabled {
+    cursor: not-allowed;
+    color: gray;
+    opacity: 30%;
 }
