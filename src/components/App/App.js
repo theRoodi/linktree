@@ -1,12 +1,8 @@
 import styles from './styles.module.css';
 import React from 'react';
-import {Login} from '../Login';
+import {Login, Dashboard, Page, CreatePage, NotFound} from '../../components';
 import {useAuth} from '../../hooks';
-import {Dashboard} from '../Dashboard/Dashboard';
-import {Page} from '../Page';
 import {Route, Routes} from 'react-router-dom';
-import {CreatePage} from '../CreatePage';
-
 
 export const App = () => {
 
@@ -19,8 +15,10 @@ export const App = () => {
                 : isAuth
                     ? <Routes>
                         <Route path="/" element={<Dashboard/>}/>
+                        <Route path="/editPage/:id" element={<CreatePage/>}/>
                         <Route path="/createPage" element={<CreatePage/>}/>
                         <Route path="/page/:id" element={<Page/>}/>
+                        <Route path="*" element={<NotFound/>}/>
                     </Routes>
                     : <Login/>}
         </div>

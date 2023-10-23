@@ -93,3 +93,8 @@
     color: gray;
     opacity: 30%;
 }
+
+.cancel {
+    cursor: pointer;
+    padding: 5px;
+}

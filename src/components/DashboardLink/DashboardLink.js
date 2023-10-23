@@ -11,10 +11,10 @@ export const DashboardLink = ({page}) => {
 
 
     const handleClickView = () => {
-        navigate(`/page/${page.id}`);
+        window.open(`/page/${page.id}`);
     }
     const handleClickEdit = () => {
-        console.log(page)
+        navigate(`/editPage/${page.id}`);
     }
     const handleClickDelete = () => {
         if (window.confirm(`Are you sure you want to delete ${page.name}?`)) {
