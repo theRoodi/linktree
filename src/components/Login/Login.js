@@ -85,8 +85,8 @@ export const Login = () => {
                    onChange={(e) => setPassword(e.currentTarget.value)}
                    placeholder="Password"/>
             <div className={styles.signup}>
-                <a href={''} onClick={registerHandler}>Register</a>
-                <a href={''} onClick={resetHandler}>Reset Password</a>
+                <a href={'#'} onClick={registerHandler}>Register</a>
+                <a href={'#'} onClick={resetHandler}>Reset Password</a>
             </div>
             <button onClick={login} disabled={!valid}>Sign In</button>
             <button onClick={googleLoginHandler} className={styles.google} id="signInGoogle">Sign In with Google
