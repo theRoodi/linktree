@@ -2,12 +2,15 @@ import React, {useEffect, useState} from 'react';
 import styles from './styles.module.css'
 import {emailRegex} from '../../service/constants';
 import {fb} from '../../service';
+import {useNavigate} from 'react-router-dom';
 
 export const Signup = () => {
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
     const [verifyPassword, setVerifyPassword] = useState('')
     const [valid, setValid] = useState(false)
+
+    const navigate = useNavigate()
 
     useEffect(() => {
         setValid(email && emailRegex.test(email) &&
@@ -19,6 +22,7 @@ export const Signup = () => {
         if (valid) {
             fb.auth.createUserWithEmailAndPassword(email, password)
                 .then(() => console.log('Sign up success'))
+                .then(() => navigate('/'))
         }
     }
 

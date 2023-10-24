@@ -31,3 +31,12 @@
     font-weight: bold;
     color: red;
 }
+.signup {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 0;
+}
+
+.google{
+
+}

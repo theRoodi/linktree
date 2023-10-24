@@ -1,8 +1,8 @@
 import styles from './styles.module.css';
 import React from 'react';
-import {Login, Dashboard, Page, CreatePage, NotFound} from '../../components';
+import {CreatePage, Dashboard, Login, NotFound, Page, Signup, Reset} from '../../components';
 import {useAuth} from '../../hooks';
-import {Route, Routes} from 'react-router-dom';
+import {Route, Routes} from 'react-router-dom'; 
 
 export const App = () => {
 
@@ -18,9 +18,13 @@ export const App = () => {
                         <Route path="/editPage/:id" element={<CreatePage/>}/>
                         <Route path="/createPage" element={<CreatePage/>}/>
                         <Route path="/page/:id" element={<Page/>}/>
-                        <Route path="*" element={<NotFound/>}/>
+                        <Route path="*" element={<NotFound/>}/>/>
                     </Routes>
-                    : <Login/>}
+                    : <Routes>
+                        <Route path="/" element={<Login/>}/>
+                        <Route path="/register" element={<Signup/>}/>
+                        <Route path="/reset" element={<Reset/>}/>
+                    </Routes>}
         </div>
     );
 }
